@@ -14,7 +14,10 @@ int main(){
 void testHorse(){
 	Horse h;
 	h.init(1, 15);
-	h.printLane();
+	for (int i = 0; i < 10; i++){
+		h.advance();
+		h.printLane();
+	} // end for
 } // end testHorse
 
 
