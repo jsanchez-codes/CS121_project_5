@@ -14,10 +14,14 @@ int main(){
 void testHorse(){
 	Horse h;
 	h.init(1, 15);
-	for (int i = 0; i < 10; i++){
+	bool keepGoing = true;
+	while (keepGoing){
 		h.advance();
 		h.printLane();
-	} // end for
+		if (h.isWinner()){
+			keepGoing =false;
+		} // end if
+	} // end while
 } // end testHorse
 
 
