@@ -5,12 +5,12 @@
 
 class Race {
         private:
-                int trackLength;
-                int NUM_HORSE;
-		int HORSE_NUM;
+                const int trackLength =15;
+                const static int NUM_HORSES = 5;
+		Horse horses[NUM_HORSES];
         public:
                 Race();
-                void advance();
+                start();
 };
 
 #endif
