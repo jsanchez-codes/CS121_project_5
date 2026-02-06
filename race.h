@@ -10,7 +10,7 @@ class Race {
 		Horse horses[NUM_HORSES];
         public:
                 Race();
-                start();
+                void start();
 };
 
 #endif
