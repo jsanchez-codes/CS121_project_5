@@ -7,7 +7,7 @@ main.o: main.cpp horse.h
 horse.o: horse.h horse.cpp
 	g++ -g -c horse.cpp
 
-race.o: race.h race.cpp
+race.o: race.h race.cpp horse.h
 	g++ -g -c race.cpp
 
 clean:
