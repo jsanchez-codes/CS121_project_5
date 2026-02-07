@@ -8,13 +8,13 @@ std::uniform_int_distribution<int> dist(0, 1);
 
 Horse::Horse(){
 	Horse::position = 0;
-	Horse::index = 0;
+	Horse::horseNum = 0;
 	Horse::trackLength = 15;
 } // end constructor
  
-void Horse::init(int index, int trackLength){
+void Horse::init(int horseNum, int trackLength){
 	Horse::position = 0;
-	Horse::index = index;
+	Horse::horseNum = horseNum;
 	Horse::trackLength = trackLength;
 } // end init
 
@@ -26,7 +26,7 @@ void Horse::advance(){
 void Horse::printLane(){
 	for (int pos = 0; pos < Horse::trackLength; pos++){
 		if (pos == Horse::position){
-			std::cout << Horse::index;
+			std::cout << Horse::horseNum;
 		} else{
 			std::cout << ".";
 		} // end if
@@ -38,7 +38,7 @@ bool Horse::isWinner(){
 	bool result = false;
 	if (Horse::position >= Horse::trackLength){
 		result = true;
-		std::cout << "Horse " << Horse::index << " Wins!" << std::endl;
+		std::cout << "Horse " << Horse::horseNum << " Wins!" << std::endl;
 	} // end if
 	return result;
 } // end isWinner

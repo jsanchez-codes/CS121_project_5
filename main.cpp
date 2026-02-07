@@ -8,23 +8,25 @@ void Race();
 int main(){
 	std::cout << "OOP Horse Race!" << std::endl;
 
-	Race();
 	Horse();
+	Race();
 
 	return 0;
 } // end main
-
+/*
 void Race(){;
-	Race.start();
+	Race r;
+	r.start();
 } //end Race
-
+*/
 void Horse(){
-	horses[numHorse].init(horseNum, trackLength);
+	Horse h;
+	h.init(horseNum, trackLength);
 	bool keepGoing = true;
 	while (keepGoing){
-		horses[numHorse].advance();
-		horses[numHorse].printLane();
-		if (horses[numHorse].isWinner()){
+		h.advance();
+		h.printLane();
+		if (h.isWinner()){
 			keepGoing =false;
 		} // end if
 	} // end while

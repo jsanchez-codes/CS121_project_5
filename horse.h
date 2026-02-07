@@ -6,11 +6,11 @@
 class Horse {
 	private:
 		int position;
-		int index;
+		int horseNum;
 		int trackLength;
 	public:
 		Horse();
-		void init(int index, int trackLength);
+		void init(int horseNum, int trackLength);
 		void advance();
 		void printLane();
 		bool isWinner();
