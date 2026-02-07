@@ -14,12 +14,13 @@ int main(){
 	return 0;
 } // end main
 
-void Race(){
-	Race r;
+void Race(){;
+	Race.start();
+} //end Race
 
 void Horse(){
 	Horse h;
-	h.init(1, 15);
+	h.init(horseNum, trackLength);
 	bool keepGoing = true;
 	while (keepGoing){
 		h.advance();
@@ -28,6 +29,5 @@ void Horse(){
 			keepGoing =false;
 		} // end if
 	} // end while
-} // end testHorse
-
+} // end Horse
 
