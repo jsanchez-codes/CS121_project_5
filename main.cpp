@@ -1,17 +1,23 @@
 #include <iostream>
 #include "horse.h"
+#include "race.h"
 
-void testHorse();
+void Horse();
+void Race();
 
 int main(){
 	std::cout << "OOP Horse Race!" << std::endl;
 
-	testHorse();
+	Race();
+	Horse();
 
 	return 0;
 } // end main
 
-void testHorse(){
+void Race(){
+	Race r;
+
+void Horse(){
 	Horse h;
 	h.init(1, 15);
 	bool keepGoing = true;

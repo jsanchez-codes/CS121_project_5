@@ -24,7 +24,7 @@ class Race{
     NUM_HORSES:int
     Horse horses[HORSE_NUM]
     Race()
-    advance()
+    start()
 }
 
 Race --> Horse
