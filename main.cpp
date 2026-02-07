@@ -21,7 +21,7 @@ void Race(){;
 */
 void Horse(){
 	Horse h;
-	h.init(horseNum, trackLength);
+	h.init(index, trackLength);
 	bool keepGoing = true;
 	while (keepGoing){
 		h.advance();

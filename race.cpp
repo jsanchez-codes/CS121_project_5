@@ -8,18 +8,18 @@ std::random_device rd;
 std::uniform_int_distribution<int> dist(0, 1);
 
 Race::Race(){
-	for (int horseNum = 0; horseNum < NUM_HORSES; horseNum++){
-		horses[horseNum].init(horseNum,trackLength);
+	for (int HORSE_NUM = 0; HORSE_NUM < NUM_HORSES; HORSE_NUM++){
+		horses[HORSE_NUM].init(HORSE_NUM,TRACK_LENGTH);
 	} // end for
 } // end race
 
 void Race::start(){
 	bool keepGoing = true;
 	while (keepGoing){
-		for (int horseNum = 0; horseNum < NUM_HORSES; horseNum++){
-			horses[horseNum].advance();
-			horses[horseNum].printLane();
-			if (horses[horseNum].isWinner()){
+		for (int HORSE_NUM = 0; HORSE_NUM < NUM_HORSES; HORSE_NUM++){
+			horses[HORSE_NUM].advance();
+			horses[HORSE_NUM].printLane();
+			if (horses[HORSE_NUM].isWinner()){
 				keepGoing = false;
 			} // end if
 		} // end for
