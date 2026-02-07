@@ -13,12 +13,12 @@ int main(){
 
 	return 0;
 } // end main
-/*
+
 void Race(){;
 	Race r;
 	r.start();
 } //end Race
-*/
+
 void Horse(){
 	Horse h;
 	h.init(index, trackLength);
