@@ -19,13 +19,12 @@ void Race(){;
 } //end Race
 
 void Horse(){
-	Horse h;
-	h.init(horseNum, trackLength);
+	horses[numHorse].init(horseNum, trackLength);
 	bool keepGoing = true;
 	while (keepGoing){
-		h.advance();
-		h.printLane();
-		if (h.isWinner()){
+		horses[numHorse].advance();
+		horses[numHorse].printLane();
+		if (horses[numHorse].isWinner()){
 			keepGoing =false;
 		} // end if
 	} // end while
