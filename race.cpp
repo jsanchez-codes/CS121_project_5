@@ -4,22 +4,19 @@
 #include "horse.h"
 #include "race.h"
 
-std::random_device rd;
-std::uniform_int_distribution<int> dist(0, 1);
-
 Race::Race(){
-	for (int HORSE_NUM = 0; HORSE_NUM < NUM_HORSES; HORSE_NUM++){
-		horses[HORSE_NUM].init(HORSE_NUM,TRACK_LENGTH);
+	for (int i = 0; i < HORSE_NUM; i++){
+		horses[i].init(i,TRACK_LENGTH);
 	} // end for
 } // end race
 
 void Race::start(){
 	bool keepGoing = true;
 	while (keepGoing){
-		for (int HORSE_NUM = 0; HORSE_NUM < NUM_HORSES; HORSE_NUM++){
-			horses[HORSE_NUM].advance();
-			horses[HORSE_NUM].printLane();
-			if (horses[HORSE_NUM].isWinner()){
+		for (int i = 0; i < HORSE_NUM; i++){
+			horses[i].advance();
+			horses[i].printLane();
+			if (horses[i].isWinner()){
 				keepGoing = false;
 			} // end if
 		} // end for

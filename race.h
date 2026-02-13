@@ -6,7 +6,7 @@
 class Race {
         private:
                 const int TRACK_LENGTH = 15;
-                const static int NUM_HORSES = 5;
+                const static int HORSE_NUM = 5;
 		Horse horses[HORSE_NUM];
         public:
                 Race();
